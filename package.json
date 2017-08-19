@@ -1,0 +1,43 @@
+{
+    "name": "ReactiveML",
+    "description": "ReactiveML Language Support for Visual Studio Code",
+    "version": "0.1.0",
+    "publisher": "himito",
+    "author": { 
+        "name": "Jaime Arias"
+    },
+    "contributors": [
+        {
+            "name": "Jaime Arias",
+            "url": "https://github.com/himito"
+        }
+    ],
+    "categories": [
+        "Languages"
+    ],
+    "license": "See license in LICENSE file",
+    "icon": "./images/rml_icon.png",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/himito/vscode-rml"
+    },
+    "bugs": {
+        "url": "https://github.com/himito/vscode-rml/issues"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "rml",
+            "aliases": ["ReactiveML", "rml"],
+            "extensions": [".rml"],
+            "configuration": "./rml_configuration.json"
+        }],
+        "grammars": [{
+            "language": "rml",
+            "scopeName": "source.rml",
+            "path": "./syntaxes/rml.json"
+        }]
+    }
+}
