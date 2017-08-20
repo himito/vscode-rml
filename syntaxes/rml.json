@@ -4,6 +4,38 @@
     "fileTypes": ["rml"],
 
     "patterns": [
+        {
+            "begin": "\\b(let)\\s+((rec\\s+)(process\\s+)?([a-z_][a-zA-Z0-9_']*)|(process\\s+)([a-z_][a-zA-Z0-9_']*)|([a-z_][a-zA-Z0-9_']*))\\s*(([a-z_][a-zA-Z0-9_']*|\\s*)*)",
+            "beginCaptures": {
+                "1": {
+                    "name": "keyword.other" 
+                },
+                "3": {
+                    "name": "keyword.other"
+                },
+                "4": {
+                    "name": "keyword.other"
+                },
+                "6": {
+                    "name": "keyword.other"
+                },
+                "5": {
+                    "name": "entity.name.function"
+                },
+                "7": {
+                    "name": "entity.name.function"
+                },
+                "8": {
+                    "name": "entity.name.function"
+                },
+                "9": {
+                    "name": "variable.parameter"
+                }
+            },
+            "end": "=\\s*",
+            "name": "keyword.operator"
+        },
+
         { "include": "source.ocaml"}
     ],
     "scopeName": "source.rml"

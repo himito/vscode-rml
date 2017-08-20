@@ -1,2 +1,11 @@
-let process =
+let process hello_world a b =
     print_endline "hello world"
+
+let rec process hello_world a b c =
+    hello_world a b
+
+let hello_world a b =
+    print_endline "hello world";
+
+let rec hello_world a b =
+    print_endline "hello world";
